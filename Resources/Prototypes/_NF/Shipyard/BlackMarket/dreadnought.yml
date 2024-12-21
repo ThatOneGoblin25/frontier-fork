@@ -1,0 +1,36 @@
+# Author Info
+# GitHub: 
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Dreadnought
+  name: Dreadnought
+  description: A fearsome vessel.
+  price: 70000 #Selling price is 22520
+  category: Large
+  group: BlackMarket
+  shuttlePath: /Maps/_NF/Shuttles/BlackMarket/dreadnought.yml
+  guidebookPage: Null
+  class:
+  - Pirate
+  engine:
+  - AME
+
+- type: gameMap
+  id: Dreadnought
+  mapName: 'Dreadnought'
+  mapPath: /Maps/_NF/Shuttles/BlackMarket/dreadnought.yml
+  minPlayers: 0
+  stations:
+    Falcon:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Dreadnought {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Pirate: [ 0, 0 ]
